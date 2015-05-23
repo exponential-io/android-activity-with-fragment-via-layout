@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/light_yellow"
+              tools:context="io.exponential.activitywithfragmentvialayout.ZFragment">
+
+    <!--
+        1. In the linear layout, we are using an `@color` resource. You need to create
+           the res/values/colors.xml file. Tip: Enter '@color/red', then press `Alt + Enter`.
+        2. The 'tools:context' in LinearLayout above creates a mapping from this layout to a
+           Fragment that is used by Android Studio to apply the theme in the Preview feature.
+           However, this mapping is only in Android Studio, and does not actually connect the layout
+           with the Fragment when you run the app. For that connection, you must inflate() the
+           layout in the Fragment's source code.
+           ref: stackoverflow.com/questions/11078487/whats-toolscontext-in-android-layout-files
+        3. Colors are saved in colors.xml
+        4. Sizes are saved in dimens.xml
+        5. Strings are saved in strings.xml
+    -->
+
+    <EditText
+        android:id="@+id/first_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_first_name"/>
+
+    <Button
+        android:id="@+id/update_first_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/update_first_name"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/label_padding"
+            android:text="@string/label_activity_param" />
+
+        <TextView
+            android:id="@+id/activity_param"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/placeholder"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/label_padding"
+            android:text="@string/label_activity_runtime" />
+
+        <TextView
+            android:id="@+id/activity_runtime_variable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/placeholder"/>
+    </LinearLayout>
+
+</LinearLayout>
