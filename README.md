@@ -120,3 +120,9 @@ A Fragment is a self contained portion of the UI including a layout and logic.
 ### Update AActivity
 
 - Edit `AActivity` as shown in the source file.
+
+## Notes
+
+The Fragment's factory method is never called in this example we do not manually create an instance
+of the Fragment in the activity. Instead, we use the `<fragment>` element and delegate the creation
+of an instance of the Fragment to Android.
